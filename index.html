@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Historical Figure - Discover Your Historical Soulmate</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="main-title">Pizza Historical Figure</h1>
+                <p class="subtitle">Your pizza selections reveal your historical soulmate through advanced personality analysis</p>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <!-- Page 1: Selection -->
+            <section id="selection-page" class="page active">
+                <div class="selection-container">
+                    <div class="page-header">
+                        <h2>Build Your Historical Pizza</h2>
+                        <p class="instruction-text">Select the toppings that define your perfect pizza</p>
+                    </div>
+                    
+                    <div class="toppings-grid">
+                        <div class="topping-card" data-topping="pepperoni">
+                            <div class="card-inner">
+                                <div class="card-header">
+                                    <div class="topping-icon pepperoni"></div>
+                                    <h3>Pepperoni</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Classic and bold</p>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="toppings" value="pepperoni">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="checkbox-label">Select</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="topping-card" data-topping="cheese">
+                            <div class="card-inner">
+                                <div class="card-header">
+                                    <div class="topping-icon cheese"></div>
+                                    <h3>Extra Cheese</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Rich and indulgent</p>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="toppings" value="cheese">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="checkbox-label">Select</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="topping-card" data-topping="pineapple">
+                            <div class="card-inner">
+                                <div class="card-header">
+                                    <div class="topping-icon pineapple"></div>
+                                    <h3>Pineapple</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Controversial sweet</p>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="toppings" value="pineapple">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="checkbox-label">Select</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="topping-card" data-topping="veggie">
+                            <div class="card-inner">
+                                <div class="card-header">
+                                    <div class="topping-icon veggie"></div>
+                                    <h3>Vegetable Medley</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Fresh and wholesome</p>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="toppings" value="veggie">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="checkbox-label">Select</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="topping-card" data-topping="anchovies">
+                            <div class="card-inner">
+                                <div class="card-header">
+                                    <div class="topping-icon anchovies"></div>
+                                    <h3>Anchovies</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Strong and acquired</p>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="toppings" value="anchovies">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="checkbox-label">Select</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="topping-card" data-topping="supreme">
+                            <div class="card-inner">
+                                <div class="card-header">
+                                    <div class="topping-icon supreme"></div>
+                                    <h3>The Supreme</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Everything included</p>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="toppings" value="supreme">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="checkbox-label">Select</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="action-container">
+                        <button id="analyze-btn" class="primary-action disabled" disabled>Analyze Historical Profile</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Page 2: Loading -->
+            <section id="loading-page" class="page">
+                <div class="loading-container">
+                    <div class="loading-header">
+                        <h2>Analyzing Your Historical Profile</h2>
+                        <p>Our advanced algorithms are processing your culinary DNA</p>
+                    </div>
+                    
+                    <div class="progress-section">
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                            <div class="progress-percentage" id="progress-percentage">0%</div>
+                        </div>
+                        
+                        <div class="analysis-steps">
+                            <div class="analysis-step" id="step1">Initializing personality matrix...</div>
+                            <div class="analysis-step" id="step2">Cross-referencing historical data...</div>
+                            <div class="analysis-step" id="step3">Calculating personality coefficients...</div>
+                            <div class="analysis-step" id="step4">Matching with historical archetypes...</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Page 3: Result -->
+            <section id="result-page" class="page">
+                <div class="result-container">
+                    <div class="result-header">
+                        <h2 id="result-figure-name">Historical Figure</h2>
+                        <h3 id="result-figure-title">Title</h3>
+                    </div>
+                    
+                    <div class="result-content">
+                        <div class="result-analysis" id="result-explanation">
+                            Your historical analysis will appear here...
+                        </div>
+                        
+                        <div class="result-profile">
+                            <h4>Your Pizza Personality Profile</h4>
+                            <div class="profile-toppings" id="profile-toppings">
+                                <!-- Toppings will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-actions">
+                        <button class="secondary-action" onclick="restartAnalysis()">Create New Profile</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
